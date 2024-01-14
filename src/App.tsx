@@ -7,6 +7,8 @@ import Products from "./components/Products";
 import CustomInput from "./components/CustomInput";
 import ThemeProvider from "./components/ThemeProvider";
 import MyCompApp from "./components/MyComponents/MyCompApp";
+import InputApp from "./components/InputField/InputApp";
+import MyComp2 from "./components/MyComponents/MyComp2";
 
 function App() {
   const [content, setContent] = useState(false);
@@ -27,6 +29,10 @@ function App() {
         <ThemeProvider>
           <MyCompApp />
         </ThemeProvider>
+
+        <InputApp>
+          <MyComp2 />
+        </InputApp>
       </div>
     </>
   );

@@ -1,12 +1,13 @@
-import  { useContext } from 'react';
+import { useContext } from "react";
+import { InputContext, TInputContext } from "../InputField/InputApp";
 
 const MyComp2 = () => {
-    const user = useContext(UserContext);
+  const {name} = useContext(InputContext) as TInputContext;
 
   return (
     <>
       <h1>Component 5</h1>
-      <h2>{`Hello ${user} again!`}</h2>
+      <h2>{`Hello ${name} again!`}</h2>
     </>
   );
 };
