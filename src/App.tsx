@@ -5,6 +5,7 @@ import Profile from "./components/Profile";
 import Products from "./components/Products";
 // import UseRefHook from "./pages/UseRefHook";
 import CustomInput from "./components/CustomInput";
+import ThemeProvider from "./components/ThemeProvider";
 import MyCompApp from "./components/MyComponents/MyCompApp";
 
 function App() {
@@ -19,11 +20,13 @@ function App() {
         {/* <UseRefHook /> */}
         <CustomInput
           styles={{
-            border: '1px solid seagreen',
-            borderRadius: '15px'
+            border: "1px solid seagreen",
+            borderRadius: "15px",
           }}
         />
-        <MyCompApp/>
+        <ThemeProvider>
+          <MyCompApp />
+        </ThemeProvider>
       </div>
     </>
   );

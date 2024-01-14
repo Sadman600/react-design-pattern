@@ -1,17 +1,20 @@
-import { createContext, useState } from "react";
-import MyComp from "./MyComp";
-
-const UserContext = createContext();
+import { useContext } from "react";
+import { ThemeContext } from "../ThemeProvider";
 
 const MyCompApp = () => {
-  const [user, setUser] = useState("Jesse Hall");
+  const { dark, setDark } = useContext(ThemeContext);
   return (
-    <UserContext.Provider value={user}>
-      <div>
-        <h1>{user}</h1>
-        <MyComp  />
-      </div>
-    </UserContext.Provider>
+    <div
+      style={{
+        border: "1px solid tomato",
+        backgroundColor: dark ? "black" : "white",
+      }}
+    >
+      <h1 style={{ color: dark ? "white" : "seagreen" }}>kkk</h1>
+      <button onClick={() => setDark((pre) => !pre)}>
+        {dark ? "White" : "Dark"}
+      </button>
+    </div>
   );
 };
 
