@@ -4,6 +4,7 @@ import MyButton from "./components/MyButton";
 import Profile from "./components/Profile";
 import Products from "./components/Products";
 import UseRefHook from "./pages/UseRefHook";
+import CustomInput from "./components/CustomInput";
 
 function App() {
   const [content, setContent] = useState(false);
@@ -14,7 +15,13 @@ function App() {
         <h1>Welcome to my app</h1>
         {content ? <Profile /> : <MyButton />}
         <Products />
-        <UseRefHook />
+        {/* <UseRefHook /> */}
+        <CustomInput
+          styles={{
+            border: '1px solid seagreen',
+            borderRadius: '15px'
+          }}
+        />
       </div>
     </>
   );
