@@ -3,6 +3,7 @@ import "./App.css";
 import MyButton from "./components/MyButton";
 import Profile from "./components/Profile";
 import Products from "./components/Products";
+import UseRefHook from "./pages/UseRefHook";
 
 function App() {
   const [content, setContent] = useState(false);
@@ -13,6 +14,7 @@ function App() {
         <h1>Welcome to my app</h1>
         {content ? <Profile /> : <MyButton />}
         <Products />
+        <UseRefHook />
       </div>
     </>
   );
