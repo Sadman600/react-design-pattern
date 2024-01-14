@@ -3,8 +3,9 @@ import "./App.css";
 import MyButton from "./components/MyButton";
 import Profile from "./components/Profile";
 import Products from "./components/Products";
-import UseRefHook from "./pages/UseRefHook";
+// import UseRefHook from "./pages/UseRefHook";
 import CustomInput from "./components/CustomInput";
+import MyCompApp from "./components/MyComponents/MyCompApp";
 
 function App() {
   const [content, setContent] = useState(false);
@@ -22,6 +23,7 @@ function App() {
             borderRadius: '15px'
           }}
         />
+        <MyCompApp/>
       </div>
     </>
   );
